@@ -1,0 +1,119 @@
+{
+  "pokemon": [
+    {
+      "id": "1",
+      "name": "Bulbasaur",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png"
+    },
+    {
+      "id": "2",
+      "name": "Ivysaur",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png"
+    },
+    {
+      "id": "3",
+      "name": "Venusaur",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png"
+    },
+    {
+      "id": "4",
+      "name": "Pikachu",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png"
+    },
+    {
+      "id": "5",
+      "name": "Raichu",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/026.png"
+    },
+    {
+      "id": "6",
+      "name": "Charmender",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png"
+    },
+    {
+      "id": "7",
+      "name": "Charizard",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png"
+    },
+    {
+        "id": "8",
+      "name": "Squirtle",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
+    },{
+        "id":"9",
+        "name": "Butterfree",
+        "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/012.png"
+    },
+    {
+      "id":"10",
+      "name":"Chikorita",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/152.png"
+    },{
+      "id":"11",
+      "name":"Charizard",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png"
+
+    },{
+      "id":"12",
+      "name":"Charmeleon",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png"
+    },{
+      "id":"13",
+      "name":"Pidgey",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/016.png"
+    },{
+      "id":"14",
+      "name":"Ninetales",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/038.png"
+    },{
+      "id":"15",
+      "name":"Venomat",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/048.png"
+    },{
+      "id":"16",
+      "name":"Parasect",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/047.png"
+    },{
+      "id":"17",
+      "name":"Golduck",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/055.png"
+    },{
+      "id":"18",
+      "name":"Meowth",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/052.png"
+    },{
+      "id":"19",
+      "name":"Gengar",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/094.png"
+    },{"id":"20",
+      "name":"Gyarados",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/130.png"
+    },
+    {
+      "id":"21",
+      "name":"Crobat",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/169.png"
+
+    }
+    , {
+      "id":"22",
+      "name":"Chinchou",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/170.png"
+
+    },{
+      "id":"23",
+      "name":"Pichu",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/172.png"
+    },{
+      "id":"24",
+      "name":"Togepi",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/175.png"
+    },{
+      "id":"25",
+      "name":"Donphan",
+      "img":"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/232.png"
+    }
+    
+
+  ]
+}
