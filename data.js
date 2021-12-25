@@ -4,17 +4,17 @@
  async function searchpokemon(n) {
      let res = await fetch(`http://localhost:3000/pokemon?q=${n}`)
      let data = await res.json();
-     console.log(data);
+    //  console.log(data);
        return data;
 
 
 
  }
 
- function appendPokemon(Pokemon) {
+ function appendPokemon(Pokemon) {//data 
     
      pokemon_div.innerHTML = null
-     Pokemon.forEach(({name}) => {
+     Pokemon.forEach(({name}) => {//{name}
         
          let p = document.createElement('p')
          p.innerText = name
@@ -23,22 +23,22 @@
  }
 
  async function main() {
-     let name = document.getElementById("search_Data").value;
-     if (name.length < 3) {
+     let name = document.getElementById("search_Data").value;//pikachu
+     if (name.length < 1) {
          return false;
      }
-     let pokemon = await searchpokemon(name);
+     let pokemon = await searchpokemon(name);//pikachu//
      console.log(pokemon);
      if (pokemon=== undefined) {
          return false;
      }
-     appendPokemon(pokemon);
+     appendPokemon(pokemon);//data= id name img
 
  }
 
  function debounce(func, delay) {
      let name = document.getElementById("search_Data").value;
-     if (name.length < 3) {
+     if (name.length < 1) {
          return false;
      }
      if (timerid) {
@@ -55,36 +55,89 @@
 
 
  let pokemon_div_img =document.getElementById('main-1')
-async function lowerdiv(){
+// async function lowerdiv(){
 
-let result =  await fetch('http://localhost:3000/pokemon') 
+// let result =  await fetch('http://localhost:3000/pokemon') 
 
-let data =await result.json();
+// let data =await result.json();
 
 
-  console.log(data)
-data.map(({name,img})=>{
-    let p= document.createElement('p');
-    p.innerHTML = name;
-    let image=document.createElement('img');
-    image.src = img
-    let div = document.createElement('div');
-    div.append(name,image);
-    pokemon_div_img.append(div);
+//   console.log(data)
+
+// }
+// lowerdiv();
+
+
+
+
+// infinite scroll
+// pokemon_div
+
+let limit = 1;
+let pageCount =1;
+let postCount =3;
+
+
+ async function getPost()
+{
+   let res= await fetch(`http://localhost:3000/pokemon?limit=${limit}&page=${pageCount}`);
+   
+   
+   
+   let data = await res.json();
+    
+    console.log(data)
+    data.map(({name,img})=>{
+      
+        let div = `<div>
+        <p>${name} ${postCount++}</p>
+        <img src="${img}"></img>
+        </div>`
+       
+        // pokemon_div_img.append(div);
+        pokemon_div_img.insertAdjacentHTML('beforeend',div)
+    
+    })
+
+
+
+}
+
+
+
+getPost();
+
+window.addEventListener('scroll',()=>{
+    const {scrollHeight,scrollTop,clientHeight} = document.documentElement;
+if(scrollTop+clientHeight>= scrollHeight){
+    console.log("Bottom");
+    getPost()
+}
+
 
 })
-}
-pokemon_div_img.addEventListener('scroll', function() {
-    if (pokemon_div_img.scrollTop + pokemon_div_img.clientHeight >= pokemon_div_img.scrollHeight) {
-      lowerdiv();
-    }
-  });
 
-  
 
-  
 
-lowerdiv();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
