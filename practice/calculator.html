@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .container {
+            /* border:1px solid black; */
+            width:33%;
+            margin:auto;
+          
+         
+        }
+
+        .row {
+            display:grid;
+           
+            grid-gap:5px;
+            /* border:1px solid red; */
+         grid-template-columns:100px 100px 100px 100px;
+         grid-template-rows: 100px 100px 100px 100px ;
+
+        
+}
+.row >  div{
+    /* width: 200px; */
+    padding:auto;
+    text-align: center;
+    border: 1px solid gray;
+    /* background:; */
+    font-family: "Flexo-Demi",arial,sans-serif;
+    color: #313131;
+    text-transform: none;
+    font-size:20px;
+    border-radius: 5px;
+padding-top:50%;
+}
+.input{
+    border:1px solid black; 
+    padding:25px; 
+    width:29% ;
+    margin:auto;
+    margin-bottom:15px;
+}
+      
+
+    </style>
+</head>
+<body>
+    <div class="input" ></div>
+
+<div class="container">
+    <div class="row">
+      
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>=</div>
+        <div>9</div>
+        <div>0</div>
+        <div>C</div>
+        <div>-</div>
+        <div>/</div>
+        <div>+</div>
+        <div>*</div>
+
+      
+
+    </div>
+   
+</div>
+
+</body>
+</html>
+<script>
+
+let char = document.querySelectorAll(".row div");
+let screen = document.querySelector(".input")
+let screenValue =""; //
+for(var i =0;i<char.length;i++){
+    char[i].addEventListener("click",(e)=>{
+       var buttonText=e.target.innerHTML;
+       
+        if(buttonText=="*"){
+          
+            screenValue += buttonText;
+            screen.innerHTML = screenValue;
+            
+        }
+        else if(buttonText=="C"){
+      
+            screenValue = ""; //storage is empty
+            screen.innerHTML=" ";
+
+
+        }
+        else if(buttonText=="="){
+            if( screenValue=== ""){
+                screen.innerHTML=0;
+            }
+            else{
+                screen.innerHTML = eval(screenValue);
+            }
+           
+        }
+        else{
+            screenValue += buttonText;
+            screen.innerHTML =screenValue;
+            
+        }
+    })
+}
+
+ 
+
+
+
+</script>

@@ -80,7 +80,7 @@ let postCount =3;
 
  async function getPost()
 {
-   let res= await fetch(`http://localhost:3000/pokemon?limit=${limit}&page=${pageCount}`);
+   let res= await fetch(`http://localhost:3000/pokemon`);
    
    
    
@@ -90,21 +90,17 @@ let postCount =3;
     data.map(({name,img})=>{
       
         let div = `<div>
-        <p>${name} ${postCount++}</p>
+        <p>${name} </p>
         <img src="${img}"></img>
         </div>`
+    
        
-        // pokemon_div_img.append(div);
+        
         pokemon_div_img.insertAdjacentHTML('beforeend',div)
     
     })
 
-
-
 }
-
-
-
 getPost();
 
 window.addEventListener('scroll',()=>{
